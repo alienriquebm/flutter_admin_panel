@@ -2,7 +2,6 @@ import 'package:admin_panel/controllers/MenuController.dart';
 import 'package:admin_panel/controllers/ProfileCardController.dart';
 import 'package:flutter/material.dart';
 import 'package:admin_panel/constants.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:admin_panel/screens/main/main_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -17,11 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Admin Panel',
-      theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: bgColor,
-          textTheme: GoogleFonts.poppinsTextTheme(
-              Theme.of(context).textTheme.apply(bodyColor: Colors.white)),
-          canvasColor: secondaryColor),
+      theme:
+          ThemeData.dark().copyWith(scaffoldBackgroundColor: bgColor, canvasColor: secondaryColor),
       home: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => MenuController()),
